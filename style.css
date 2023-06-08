@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2a3471;
+}
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: auto;
+}
+.image-group {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.image {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url(./1.jpg) center/cover no-repeat border-box;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.image:nth-child(2) {
+  background-image: url(./2.jpg);
+  right: 0;
+  top: 0;
+}
+.image:nth-child(3) {
+  background-image: url(./3.jpg);
+  bottom: 0;
+  left: 0;
+}
+.image:last-child {
+  background-image: url(./4.jpg);
+  right: 0;
+  bottom: 0;
+}
+.image-group:hover .image {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.image-group .image:hover {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+}
